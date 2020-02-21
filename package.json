@@ -1,0 +1,56 @@
+{
+  "name": "simple-app-server",
+  "version": "1.0.0",
+  "description": "demo express app",
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "nodemonConfig": {
+    "exec": "npm run dev",
+    "watch": [
+      "./src/*",
+      "./public/*"
+    ],
+    "ignore": [
+      "**/__tests__/**",
+      "*.test.js",
+      "*.spec.js"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "build-clean": "npm run clean && npm run transpile && npm run copy-static && npm run copy-templates",
+    "server": "cd dist && node index.js",
+    "transpile": "babel ./src --out-dir dist",
+    "copy-static": "cp -r ./public ./dist/public",
+    "copy-templates": "cp -r ./src/views ./dist/views",
+    "clean": "rimraf dist",
+    "dev": "NODE_ENV=development && npm run build-clean && npm run server",
+    "prod": "NODE_ENV=production && npm run build-clean && npm run server",
+    "watch:dev": "nodemon",
+    "test": "jest"
+  },
+  "author": "mockeryjones@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "D": "^1.0.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "handlebars": "^4.7.3",
+    "jest": "^25.1.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2",
+    "rimraf": "^3.0.2",
+    "winston": "^3.2.1"
+  }
+}

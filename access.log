@@ -1,0 +1,2 @@
+::1 - GET /users HTTP/1.1 200 15 - 13.481 ms
+::1 - GET /users HTTP/1.1 304 - - 1.326 ms
