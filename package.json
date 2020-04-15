@@ -33,7 +33,7 @@
     "watchClient": "webpack -w",
     "copy-templates": "cp -r ./src/views ./dist/views",
     "copy-bootstrap": "mkdir ./dist/public/bootstrap && cp -r ./node_modules/bootstrap/dist/css ./dist/public/bootstrap/css && cp -r ./node_modules/bootstrap/dist/js ./dist/public/bootstrap/js",
-    "clean": "rimraf dist && mkdir dist && mkdir dist/public",
+    "clean": "rimraf dist && mkdir dist && mkdir dist/public && mkdir logs",
     "sass": "node-sass src/views/scss/simple.scss --o dist/public/css",
     "dev": "NODE_ENV=development && npm run build-clean && npm run server",
     "prod": "NODE_ENV=production && npm run build-clean && npm run server",
