@@ -1,0 +1,16 @@
+<div class="col-md-4">
+  {{#each models}}
+  <span class="card" style='margin-bottom: 20px; margin-top: 20px;'>
+    <div class="card-header">
+      {{modelname}}: {{id}}
+    </div>
+    <div class="card-body">
+      {{> _model_display}}
+    </div>
+    <div class="card-footer">
+      <a href="/model/{{modelname}}/display/{{id}}">display</a>/
+      <a href="/model/{{modelname}}/edit/{{id}}">edit</a>
+    </div>
+  </span>
+  {{/each}}
+</div>

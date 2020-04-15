@@ -1,0 +1,13 @@
+<div class="col-md-12">
+    {{#each params}}
+      {{#if encrypt}}{{else}}
+        <div>
+          <span class="col-md-4" style="display:inline-block">{{label}}</span>
+          <span class="col-md-6" style="display:inline-block">{{value}}</span>
+        </div>
+      {{/if}}
+    {{/each}}
+    <div>
+      <a href='/model/{{modelname}}/edit/{{model._id}}'>edit model</a>
+    <div>
+</div>

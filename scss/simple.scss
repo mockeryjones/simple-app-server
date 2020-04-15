@@ -1,0 +1,100 @@
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+$light-blue: #A9DEFF !default;
+$mid-blue: #88BBFB !default;
+$royal-blue: #068CDA !default;
+$cheery-blue: #005FD5 !default;
+$dark-blue: #00279A !default;
+$light-green: #4EC596 !default;
+$dark-green: #336367 !default;
+$blood-red: #AF0826 !default;
+$orange-shadow: #A39088 !default;
+$yellow-smudge: #AFA392 !default;
+$purple-mid: #AB4F96 !default;
+$purple-dark: #A63277 !default;
+$purple-light: #8A9EFA !default;
+
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "light-blue": $light-blue,
+    "mid-blue":   $mid-blue,
+    "royal-blue": $royal-blue,
+    "cheery-blue":$cheery-blue,
+    "dark-blue":  $dark-blue,
+    "light-green":$light-green,
+    "dark-green": $dark-green,
+    "blood-red":  $blood-red,
+    "orange-shadow":$orange-shadow,
+    "yellow-smudge":$yellow-smudge,
+    "purple-mid": $purple-mid,
+    "purple-dark":$purple-dark,
+    "purple-light": $purple-light,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ),
+  $colors
+);
+
+$primary:       $yellow-smudge !default;
+$secondary:     $gray-600 !default;
+$success:       $light-green !default;
+$info:          $royal-blue !default;
+$warning:       $orange-shadow !default;
+$danger:        $blood-red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval:      8% !default;
+
+$body-bg:                   $dark-blue !default;
+$body-color:                $light-green !default;
+
+@import "../node_modules/bootstrap/scss/bootstrap";

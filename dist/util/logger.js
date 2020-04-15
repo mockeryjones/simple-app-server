@@ -21,7 +21,7 @@ var logger = _winston["default"].createLogger({
   }), new _winston["default"].transports.File({
     filename: '../logs/combined.log'
   }), new _winston["default"].transports.Console({
-    level: 'info'
+    level: 'verbose'
   })]
 });
 

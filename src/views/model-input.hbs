@@ -1,0 +1,50 @@
+<div class="col-sm-12">
+  <form action='{{form.action}}' method='{{form.method}}' {{#if form.error}}error={{form.error}}{{/if}} id='user_creation'>
+    {{#if errors}}
+      <ul>
+        {{#each errors}}
+            <li>{{field}}:  ({{message}})</li>
+        {{/each}}
+      </u;>
+    {{/if}}
+    {{#each model}}
+      {{#if display}}
+        <p class='form-group'>
+          <label class='col-sm-2' for={{name}}>{{label}}</label>
+          <input class='col-sm-4 form-control' type='{{input}}' name='{{name}}' id='{{name}}' {{#if encrypt}}{{else}}value='{{value}}'{{/if}}/>
+          {{#if error}}
+            <p>{{error}}</p>
+          {{/if}}
+        </p>
+      {{/if}}
+    {{/each}}
+  </p>
+    <input class="btn btn-primary btn-sm" type='submit' id='submit' name='submit' value='submit'/>
+  </p>
+  </p>
+    <input class="btn btn-primary btn-sm btn-secondary" type='button' name='do put' value='submit by put' onclick='putSave()'/>
+  </p>
+  </form>
+</div>
+<script>
+
+    let putSave = function() {
+
+      console.log('put save called');
+      //get the form data from fields
+      //create json object
+
+      /**
+      var jsonData = {
+
+      }
+
+      fetch('{{form.action}}', {method: 'PUT', body: jsonData})
+      .then((response) => response.json())
+      .then((result) => {console.log('Success:', result);})
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+      */
+    }
+</script>

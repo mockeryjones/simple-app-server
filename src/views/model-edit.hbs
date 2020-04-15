@@ -1,0 +1,36 @@
+<div class="col-sm-12">
+  <form action='{{form.action}}' method='{{form.method}}' {{#if form.error}}error={{form.error}}{{/if}} id='user_creation'>
+    {{#if form.errors}}
+      <ul>
+        {{#each form.errors}}
+            <li>{{type}}:  ({{message}})</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    {{#each model}}
+      {{#if display}}
+        {{#if encrypt}}
+          <p class='form-group'>
+            <label class='col-sm-4' for={{name}}>{{label}}</label>
+            <input class='col-sm-4 form-control' type='{{input}}' name='{{name}}' id='{{name}}'/>
+            {{#if error}}
+              <p>{{error}}</p>
+            {{/if}}
+          </p>
+        {{else}}
+          <p class='form-group'>
+            <label class='col-sm-4' for={{name}}>{{label}}</label>
+            <input class='col-sm-4 form-control' type='{{input}}' name='{{name}}' id='{{name}}' value='{{value}}'/>
+            {{#if error}}
+              <p>{{error}}</p>
+            {{/if}}
+          </p>
+        {{/if}}
+      {{/if}}
+    {{/each}}
+  </p>
+    <input class="btn btn-primary btn-sm" type='submit' id='submit' name='submit' value='submit'/>
+  </p>
+
+  </form>
+</div>

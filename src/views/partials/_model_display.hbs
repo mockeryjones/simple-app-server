@@ -1,0 +1,8 @@
+{{#each params}}
+  {{#if encrypt}}{{else}}
+    <div class="{{modelname}}">
+      <span class="label">{{label}}</span>
+      <span class="label">{{value}}</span>
+    </div>
+  {{/if}}
+{{/each}}
